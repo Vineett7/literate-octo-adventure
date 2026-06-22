@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+        <label for="">Number 1</label>
+        <input type="text" id="a">
+
+        <label for="">Number 2</label>
+        <input type="text" id="b">
+
+        <button onclick="return plus()">+</button>
+        <button onclick="return minus()">-</button>
+        <button onclick="return multiply()">*</button>
+        <button onclick="return divide()">/</button>
+        <button onclick="return modulo()">%</button>
+
+
+
+        <p>Result:- <b id="rs"></b></p>
+
+        <br>
+        <p id="abc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quia doloremque quasi, libero alias fugit
+            excepturi, dignissimos explicabo maxime laborum dolor est incidunt magnam rem corrupti odio. Accusamus,
+            laboriosam blanditiis.</p>
+            <br>
+             <button onclick="return bold()">Bold</button>
+             <button onclick="return italic()">Italic</button>
+
+    </form>
+
+    <script>
+        function plus() {
+            var a = document.querySelector('#a').value
+            var b = document.querySelector('#b').value
+            var e = document.querySelector('#rs')
+            var c = parseInt(a) + parseInt(b)
+            e.innerHTML = c
+            return false
+        }
+
+        function minus() {
+            var a = document.querySelector('#a').value
+            var b = document.querySelector('#b').value
+            var e = document.querySelector('#rs')
+            var c = parseInt(a) - parseInt(b)
+            e.innerHTML = c
+            return false
+        }
+
+        function multiply() {
+            var a = document.querySelector('#a').value
+            var b = document.querySelector('#b').value
+            var e = document.querySelector('#rs')
+            var c = parseInt(a) * parseInt(b)
+            e.innerHTML = c
+            return false
+        }
+
+        function divide() {
+            var a = document.querySelector('#a').value
+            var b = document.querySelector('#b').value
+            var e = document.querySelector('#rs')
+            var c = parseInt(a) / parseInt(b)
+            e.innerHTML = c
+            return false
+        }
+
+        function modulo() {
+            var a = document.querySelector('#a').value
+            var b = document.querySelector('#b').value
+            var e = document.querySelector('#rs')
+            var c = parseInt(a) % parseInt(b)
+            e.innerHTML = c
+            return false
+        }
+        
+
+         function bold(){
+            var b = document.querySelector('#abc')
+            b.style.fontWeight = 'bold'
+            b.style.color = 'red'
+            return false
+        }
+
+        function italic(){
+            var b = document.querySelector('#abc')
+            b.style.fontStyle = 'italic'
+            b.style.color = 'blue'
+            return false
+        }
+
+    </script>
+
+</body>
+
+</html>
